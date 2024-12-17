@@ -1,37 +1,72 @@
-<div class="relative flex flex-col justify-center items-center bg-background-colour dark:bg-background-colour-dark" [ngClass]="{ 'dark': isDarkMode }">
-
+<div
+  class="relative flex flex-col justify-center items-center bg-background-colour dark:bg-background-colour-dark"
+  [ngClass]="{ dark: isDarkMode }"
+>
   <!-- Dark Mode Toggle Button -->
-  <button (click)="toggleDarkMode()" class="absolute top-4 right-4 p-2 bg-text-colour dark:bg-background-colour rounded-full hover:bg-accent-dark transition hover:scale-105 active:scale-95 hover:bg-accent-dark focus:outline-none">
+  <button
+    (click)="toggleDarkMode()"
+    class="absolute top-4 right-4 p-2 bg-text-colour dark:bg-background-colour rounded-full hover:bg-accent-dark transition hover:scale-105 active:scale-95 hover:bg-accent-dark focus:outline-none"
+  >
     <span *ngIf="!isDarkMode">🌙</span>
     <span *ngIf="isDarkMode">☀️</span>
   </button>
 
   <!-- Hero Section -->
-  <div class="hero-section h-dvh flex flex-col justify-center items-center w-8/12">
-    <h1 class="h1-sizing text-text-colour dark:text-text-colour-dark">Hi, I'm <span class="text-accent-colour dark:text-accent-colour-dark">Tom Gordon</span></h1>
-    <div class="flex flex-row justify-between w-11/12">
+  <div
+    class="hero-section h-dvh flex flex-col justify-center items-center w-8/12"
+  >
+    <h1
+      class="h1-sizing h1-padding text-colouring"
+    >
+      Hi, I'm
+      <span class="text-accent-colour dark:text-accent-colour-dark"
+        >Tom Gordon</span
+      >
+    </h1>
+    <div class="flex flex-row justify-between w-10/12">
       <div class="flex flex-col justify-start">
-        <h3 class="h3-sizing text-text-colour dark:text-text-colour-dark">I'm a software engineer based in <span class="text-accent-colour font-bold dark:text-accent-colour-dark">Bath, UK</span></h3>
-        <h3 class="h3-sizing text-text-colour dark:text-text-colour-dark">Currently working &#64; <a href="https://www.discoveryeducation.com" target="_blank" class="text-accent-colour font-bold hover:underline dark:text-accent-colour-dark">Discovery Education</a></h3>
+        <h3 class="h3-sizing text-colouring">
+          I'm a software engineer based in
+          <span
+            class="text-accent-colour font-bold dark:text-accent-colour-dark"
+            >Bath, UK</span
+          >
+        </h3>
+        <h3 class="h3-sizing text-colouring">
+          Currently working &#64;
+          <a
+            href="https://www.discoveryeducation.com"
+            target="_blank"
+            class="text-accent-colour font-bold hover:underline dark:text-accent-colour-dark"
+            >Discovery Education</a
+          >
+        </h3>
       </div>
-      <a href="#contact-section" class="flex justify-center items-center p-4 rounded-full bg-accent-colour text-background-colour shadow-lg transition-all transform hover:scale-105 active:scale-95 hover:bg-accent-dark focus:outline-none dark:bg-accent-colour-dark dark:text-text-colour-dark">
+      <a
+        href="#contact-section"
+        class="flex flex-row justify-center items-center px-4 rounded-full bg-accent-colour text-background-colour shadow-lg transition-all transform hover:scale-105 active:scale-95 hover:bg-accent-dark focus:outline-none dark:bg-accent-colour-dark dark:text-text-colour-dark"
+      >
         <h3 class="h3-sizing font-semibold">Contact Me!</h3>
       </a>
     </div>
   </div>
 
   <!-- About Section -->
-  <div class="about-section">
-
-  </div>
+  <div id="about-section"></div>
+  <ng-container>
+    <h1 class="h1-sizing text-colouring">
+      About Me
+    </h1>
+  </ng-container>
 
   <!-- Experience / Projects Section -->
-  <div class="experience-section">
-
-  </div>
-
+  <div id="experience-section"></div>
+  <ng-container>
+    <h1 class="h1-sizing text-colouring">Experience</h1>
+  </ng-container>
   <!-- Contact Section -->
-  <div class="contact-section">
-
-  </div>
+  <div id="contact-section"></div>
+  <ng-container>
+    <h1 class="h1-sizing text-colouring">Contact Me</h1>
+  </ng-container>
 </div>
